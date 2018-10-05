@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+ <style type="text/css">
+   .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 16px;
+  margin: 10px auto 10px auto;
+  max-width:600px;
+} 
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.btn {
+    background-color:   #228B22;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+  position: absolute;
+  border-radius: 5px;
+ 
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+.text{
+    font-size: 40px;
+    color: #8B4513;
+}
+
+input[type=text],input[type=password]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+ </style>
+
+   <script>
+   	$(document).ready(function(){
+    $("#login_user").click(function(){
+        var email1 = $("#email1").val();
+        var password = $("#password").val();
+        
+        $.ajax({
+            type: 'POST',
+            url: 'login.php',
+            data: {email1:email1, password:password},                             
+            success: function(data){
+                if(data == 1){
+                   window.location.href = "index.php";                  
+                 }else{
+                    alert(data);
+                  }                
+             }                  
+        });        
+    });
+}); 
+ </script>
+  </head>
+  <body>
+       <div class="container">
+  	  <label for="email"><b>Email:</b></label>
+	  <i class="fa fa-envelope icon"></i>
+      <input type="text" class="form-control" placeholder="Enter Email" id="email1" required></br>
+
+      <label for="pwd"><b>Password:</b></label>
+	    <i class="fa fa-key icon"></i>
+      <input type="password" class="form-control" placeholder="Enter Password" id="password" required><br>
+	  
+	  <label>Remember Me:</label> 
+	  <input type="checkbox" name="rememberme" id="rememberMe" value="1"><br></br>
+
+      <button type="submit" class="btn" id="login_user">LogIn</button>
+
+    </div>
+  </body>
+  </html> 
