@@ -1,6 +1,6 @@
 # GoGreen Store (WEB-APPLICATION) 
 ### (Built in Php)
-![gogreen](https://github.com/pallavidagriya142/Web-Applications/blob/master/logo.png)
+![gogreen](https://github.com/pallavidagriya142/Web-Applications/blob/master/login.png)
 
 ## About Developer
 1.Developer --> Pallavi Dagriya
@@ -12,7 +12,7 @@
 1. Basic knowledge of HTML, CSS, BOotstrap, JS, Ajax & PHP.
 2. Install Text editor like Notepad++, Sublime Text etc. in your system. 
 3. Install XAMPP Server (You can download XAMPP for windows with link given in below).
-  [Click Here](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-14-04)
+  [Click Here](https://www.apachefriends.org/download.html)
 4. Proper internet connectivity.
 
 ## Project Description:-
